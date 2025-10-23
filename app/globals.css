@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.gradient-karma {
+  background: linear-gradient(135deg, #E63946 0%, #1D3557 100%);
+}
+
+.gradient-ayanokoji {
+  background: linear-gradient(135deg, #457B9D 0%, #A8DADC 100%);
+}
+
+.gradient-combined {
+  background: linear-gradient(135deg, #E63946 0%, #457B9D 50%, #A8DADC 100%);
+}
+
+.day-card {
+  transition: all 0.3s ease;
+}
+
+.day-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.section-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+@media print {
+  .no-print {
+    display: none;
+  }
+}
